@@ -10,6 +10,8 @@ while True:
     guess = random.choice(choices)
     user_guess=input("Rock, paper or scissors? (r/p/s):").lower()
 
+    # Another way of checking the samething is as below
+    #if user_guess in choices:
     if user_guess=="r" or user_guess=="p" or user_guess=="s":
 
         if user_guess == "r" and guess == "s":
@@ -32,6 +34,9 @@ while True:
             else:
                 temp = "✂️"
                 print("I won!!!!: I guess Scissor"+ temp)
+        
+        if input("You need to try again? (y/n)").lower() == "n":
+            break
     else:
         print("Invalid Argument")
 
